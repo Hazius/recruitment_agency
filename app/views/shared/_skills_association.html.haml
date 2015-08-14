@@ -1,0 +1,6 @@
+= f.association :skills
+#skills
+  = f.simple_fields_for :skills do |skill|
+    = render 'shared/skill_fields', f: skill
+  .links
+    = link_to_add_association 'Добавить умение', f, :skills, partial: 'shared/skill_fields'

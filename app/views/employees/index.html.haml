@@ -1,0 +1,24 @@
+%table.table
+  %thead
+    %tr
+      %th Имя
+      %th Статус
+      %th Зарплата
+      %th Контакт
+      %th Умения
+      %th
+
+  %tbody
+    - @resources.each do |resource|
+      %tr
+        %td= resource.name
+        %td= resource.contact_info
+        %td= resource.status
+        %td= resource.salary
+        %td
+          %ul
+            - resource.skills.each do |skill|
+              %li= skill.title
+        %td= render 'shared/index_buttons', resource: resource
+%br
+= link_to 'Создать', url_for(controller: controller_name, action: :new)

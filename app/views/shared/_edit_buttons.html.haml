@@ -1,0 +1,7 @@
+%br
+%br
+= f.submit 'Сохранить', class: 'btn btn-primary'
+= link_to 'Показать все', url_for(controller: controller_name, action: :index), class: 'btn btn-default'
+= link_to 'Удалить', resource, :method => :delete, :data => { :confirm => 'Вы уверены?' }, class: 'btn btn-danger'
+%br
+%br

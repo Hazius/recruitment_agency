@@ -5,7 +5,7 @@ class CreateVacancies < ActiveRecord::Migration
       t.date :date_of_submit
       t.date :date_of_expiry
       t.integer :salary
-      t.string :сontact
+      t.string :contact_info
 
       t.timestamps null: false
     end

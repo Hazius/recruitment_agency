@@ -1,0 +1,9 @@
+.row
+  .col-md-7
+    = simple_form_for @resource do |f|
+      = f.input :name
+      = f.input :contact_info
+      = f.input :status
+      = f.input :salary
+      = render 'shared/skills_association', f: f
+      = render 'shared/edit_buttons', resource: @resource, f: f

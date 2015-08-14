@@ -1,0 +1,12 @@
+.row
+  .col-md-7
+    = simple_form_for @resource do |f|
+      = f.input :title
+      = f.label :date_of_submit
+      = f.text_field :date_of_submit, class: 'datepicker form-control'
+      = f.label :date_of_expiry
+      = f.text_field :date_of_expiry, class: 'datepicker form-control'
+      = f.input :salary
+      = f.input :contact_info
+      = render 'shared/skills_association', f: f
+      = render 'shared/edit_buttons', resource: @resource, f: f
