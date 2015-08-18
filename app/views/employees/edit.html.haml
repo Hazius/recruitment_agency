@@ -3,7 +3,11 @@
     = simple_form_for @resource do |f|
       = f.input :name
       = f.input :contact_info
-      = f.input :status
+      / = f.input :status
+      = f.input :status,
+        collection: Employee.statuses.keys,
+        :selected => Employee.statuses.keys[@resource[:status].to_i],
+        input_html: { autocomplete: 'off' }
       = f.input :salary
       = render 'shared/skills_association', f: f
       = render 'shared/edit_buttons', resource: @resource, f: f

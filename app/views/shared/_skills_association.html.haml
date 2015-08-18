@@ -1,6 +1,10 @@
-= f.association :skills
-#skills
-  = f.simple_fields_for :skills do |skill|
-    = render 'shared/skill_fields', f: skill
-  .links
-    = link_to_add_association 'Добавить умение', f, :skills, partial: 'shared/skill_fields'
+.panel.panel-success
+  .panel-heading Умения
+  .panel-body
+    = f.association :skills
+    #skills
+      - if f.object.errors.present?
+        = f.simple_fields_for :skills do |skill|
+          = render 'shared/skill_fields', f: skill
+      .links
+        = link_to_add_association 'Добавить умение', f, :skills, partial: 'shared/skill_fields'

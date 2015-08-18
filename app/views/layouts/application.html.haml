@@ -9,8 +9,8 @@
     .container
       .jumbotron
         %h1 Сайт для кадрового агенства
-        %p.lead ...
+        %hr
         %p
-          %a.btn.btn-lg.btn-success{:href => vacancies_path, :role => "button"} Вакансии
-          %a.btn.btn-lg.btn-success{:href => employees_path, :role => "button"} Работники
+          %a.btn.btn-lg.btn-default{:href => vacancies_path, :role => "button"} Вакансии
+          %a.btn.btn-lg.btn-default{:href => employees_path, :role => "button"} Работники
       = yield

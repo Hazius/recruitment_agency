@@ -1,8 +1,16 @@
 Rails.application.routes.draw do
 
   root 'welcome#index'
-  resources :employees
-  resources :vacancies
+  resources :employees do
+    collection do
+      get :for_vacancy
+    end
+  end
+  resources :vacancies do
+    collection do
+      get :for_employee
+    end
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,24 +1,29 @@
-%table.table
+%h2
+  Работники
+  = link_to 'Создать', url_for(controller: controller_name, action: :new), class: 'btn btn-lg btn-primary'
+%hr
+%table.table.table-hover.table-condensed.table-bordered.datatable
   %thead
     %tr
-      %th Имя
-      %th Статус
+      %th
       %th Зарплата
       %th Контакт
+      %th Имя
+      %th Статус
       %th Умения
       %th
 
   %tbody
     - @resources.each do |resource|
       %tr
-        %td= resource.name
-        %td= resource.contact_info
-        %td= resource.status
+        %td= link_to 'Подходящие вакансии', for_employee_vacancies_path(employee_id: resource.id)
         %td= resource.salary
+        %td= resource.contact_info
+        %td= resource.name
+        %td= resource.status
         %td
           %ul
             - resource.skills.each do |skill|
               %li= skill.title
         %td= render 'shared/index_buttons', resource: resource
-%br
-= link_to 'Создать', url_for(controller: controller_name, action: :new)
+

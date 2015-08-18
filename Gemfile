@@ -91,3 +91,4 @@ end
 
 gem 'kaminari'
 gem "audited-activerecord", "~> 4.0"
+gem 'russian'
