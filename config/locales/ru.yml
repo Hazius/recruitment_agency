@@ -1,0 +1,20 @@
+ru:
+  activerecord:
+    models:
+    attributes:
+      employee:
+        name: Имя
+        contact_info: Контакт
+        status: Статус
+        salary: Зарплата
+        skills: Умения
+      skill:
+        title: Название
+      vacancy:
+        title: Название
+        contact_info: Контакт
+        date_of_submit: Дата добавления
+        date_of_expiry: Действительна до
+        salary: Зарплата
+        skills: Умения
+
