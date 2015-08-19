@@ -1,8 +1,3 @@
-################################################################################
-# Updated according to:
-#   - Michael Hartl 3-rd Edition
-#   - BKC standards
-###############################################################################
 source 'https://rubygems.org'
 ruby "2.2.1"
 
@@ -19,15 +14,14 @@ gem 'sdoc',         '~> 0.4.0', group: :doc   # bundle exec rake doc:rails gener
 gem 'bcrypt',       '~> 3.1.7'                # Use ActiveModel has_secure_password
 gem 'haml-rails'                              # https://github.com/indirect/haml-rails
 gem 'bootstrap-sass'
+gem 'pg'
 group :development, :test do
   gem 'byebug'                                # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'web-console', '~> 2.0'                 # Access an IRB console on exception pages or by using <%= console %> in views
   # gem 'spring'                                # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'mysql2'
 end
 group :production do
   gem 'rails_12factor'
-  # gem 'pg'
 end
 gem 'sprockets'
 gem 'simple_form'
