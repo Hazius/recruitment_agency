@@ -17,6 +17,10 @@ class EmployeesController < ApplicationController
     ]
   end
 
+  def index
+    @resources = resource_class.includes(:skills).all
+  end
+
   def for_vacancy
     @vacancy = Vacancy.find_by id: params[:vacancy_id]
     @resources = Employee.for(@vacancy.id).order(:salary) if @vacancy.present?
